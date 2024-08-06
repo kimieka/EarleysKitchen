@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Earleys Kitchen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poiret One', sans-serif;
+            background-color: #3f3b3b;
+            background-image: url("IMG_0979.jpg"); /* Path to your background image */
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100vw;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ensures even spacing between elements */
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #000; 
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 375px; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .font-big {
+            font-size: 23px;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        #request {
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            font-size: larger; /* Adjust the font size as needed */
+        }
+
+        nav a {
+            margin-left: 20px; /* Adjust the spacing between links as needed */
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #ccc; /* Example color on hover */
+        }
+
+        .content {
+            padding-top: 100px; /* Space for the fixed header and header image */
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            color: #fff; /* Text color for better readability */
+        }
+
+        .panel-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .panel {
+            flex: 1 1 48%;
+            background-color: rgba(227, 170, 25, 0.4);
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .brown-panel {
+            background-color: rgba(227, 170, 25, 0.4); /* Brown color with 50% opacity */
+        }
+
+
+        .menu-day {
+            display: flex;
+            flex-direction: row; /* Change to row */
+        }
+
+        .menu-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the sections */
+            align-items: center; /* Center the sections vertically */
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Background color for the entire section */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-category {
+            flex: 1 1 48%;
+            max-width: 500px; /* Max width to control the panel width */
+            background-color: rgba(227, 170, 25, 0.3); /* Background color for individual categories */
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the text inside the categories */
+        }
+        
+        .menu-title {
+            width: 100%;
+            text-align: center; /* Center the title */
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="earleys2.png" alt="Earleys Kitchen Logo" class="logo">
+        </a>
+        <nav class="font-big bold-text yellow-text">
+            <a href="#menus" id="menus">Menu</a>
+            <a href="#locations" id="locations">Locations</a>
+            <a href="#about" id="about">About Us</a>
+            <button id="request">Request</button>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>MENU</h1>
+
+        <div class="menu-section">
+            <h2 class="menu-title">Monday</h2>
+            <div class="menu-day">
+                <div class="menu-category">
+                    <h3>Meats</h3>
+                    <ul>
+                        <li>Creole Penne Jambalaya</li>
+                        <li>Oxtails</li>
+                        <li>Fried Chicken</li>
+                        <li>Fried Chicken Livers</li>
+                        <li>Fried Chicken Gizzards</li>
+                        <li>Baked Turkey Wings</li>
+                        <li>Beef Pepper Steak</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                  <h3>Sides</h3>
+                    <ul>
+                        <li>Mashed Potatoes</li>
+                        <li>Rice</li>
+                        <li>Brown Rice</li>
+                        <li>Collard Greens</li>
+                        <li>Slaw</li>
+                        <li>Green Beans</li>
+                        <li>Corn</li>
+                        <li>Red Pepper Medley</li>
+                        <li>Roasted Honey Garlic Carrots</li>
+                        <li>Peas O' Plenty</li>
+                        <li>Mac and Cheese</li>
+                        <li>Cornbread Dressing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="menu-title">Tuesday</h2>
+            <div class="menu-day">
+                <div class="menu-category">
+                    <h3>Meats</h3>
+                    <ul>
+                        <li>Oxtails</li>
+                        <li>Chicken and Dumplings</li>
+                        <li>Smothered Hamburger Steak</li>
+                        <li>Fried Pork Chops</li>
+                        <li>Baked Spaghetti</li>
+                        <li>Nashville Hot Chicken</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Sides</h3>
+                    <ul>
+                        <li>Mashed Potatoes</li>
+                        <li>Rice</li>
+                        <li>Brown Rice</li>
+                        <li>Collard Greens</li>
+                        <li>Zucchini and Squash Medley</li>
+                        <li>Green Beans</li>
+                        <li>Fried Okra</li>
+                        <li>Rice and Peas</li>
+                        <li>Sauteed Cabbage and Carrots</li>
+                        <li>Black Eyed Peas</li>
+                        <li>Mac and Cheese</li>
+                        <li>Roasted Garlic Mushrooms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="menu-title">Wednesday</h2>
+            <div class="menu-day">
+                <div class="menu-category">
+                    <h3>Meats</h3>
+                    <ul>
+                        <li>Oxtails</li>
+                        <li>Fried Chicken</li>
+                        <li>Herb Baked Chicken</li>
+                        <li>Shepard's Pie</li>
+                        <li>Liver and Onions</li>
+                        <li>Smothered Pork Chops</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Sides</h3>
+                    <ul>
+                        <li>Sweet Potato Souffle</li>
+                        <li>Rice</li>
+                        <li>Brown Rice</li>
+                        <li>Collard Greens</li>
+                        <li>Corn Pudding</li>
+                        <li>Yellow Rice</li>
+                        <li>Butter Peas</li>
+                        <li>Fresh Broccoli</li>
+                        <li>Roasted Honey Garlic Carrots</li>
+                        <li>Roasted Vegetable Medley</li>
+                        <li>Mac and Cheese</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="menu-title">Thursday</h2>
+            <div class="menu-day">
+                <div class="menu-category">
+                    <h3>Meats</h3>
+                    <ul>
+                        <li>Oxtails</li>
+                        <li>Fried Chicken</li>
+                        <li>Mojo Island Pork</li>
+                        <li>Fried Fish Fillets</li>
+                        <li>Fried Chicken Gizzards</li>
+                        <li>Chicken and Rice Casserole</li>
+                        <li>Smoked Mojo Chicken Thighs</li>
+                    </ul>
+                </div>
+                <div class="menu-category">
+                    <h3>Sides</h3>
+                    <ul>
+                            <li>Yellow Rice</li>
+                            <li>Rice</li>
+                            <li>Brown Rice</li>
+                            <li>Collard Greens</li>
+                            <li>Cabbage</li>
+                            <li>Field Peas</li>
+                            <li>Baked Beans</li>
+                            <li>Cheese Grits</li>
+                            <li>Potato Salad</li>
+                            <li>Hush Puppies</li>
+                            <li>Mac and Cheese</li>
+                            <li>Fried Green Tomatoes</li>
+                            <li>Candied Yams</li>
+                            <li>Succotash</li>
+                            <li>Ripe Plantains</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="menu-section">
+                <h2 class="menu-title">Friday</h2>
+                <div class="menu-day">
+                    <div class="menu-category">
+                        <h3>Meats</h3>
+                        <ul>
+                            <li>Oxtails</li>
+                            <li>Fried Chicken</li>
+                            <li>Fried Fish</li>
+                            <li>Meatloaf</li>
+                            <li>Smoked Pork Chops</li>
+                            <li>Fried Gizzards</li>
+                            <li>Fried Livers</li>
+                        </ul>
+                    </div>
+                    <div class="menu-category">
+                        <h3>Sides</h3>
+                        <ul>
+                            <li>Mashed Potatoes</li>
+                            <li>Rice</li>
+                            <li>Brown Rice</li>
+                            <li>Collard Greens</li>
+                            <li>Green Beans</li>
+                            <li>Corn</li>
+                            <li>Red Pepper Medley</li>
+                            <li>Roasted Honey Garlic Carrots</li>
+                            <li>Peas O' Plenty</li>
+                            <li>Mac and Cheese</li>
+                            <li>Cornbread Dressing</li>
+                            <li>Sweet Potato Souffle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="menu-section">
+                <h2 class="menu-title">Saturday</h2>
+                <div class="menu-day">
+                    <div class="menu-category">
+                        
+                    </div>
+                    <div class="menu-category">
+                        
+                    </div>
+                </div>
+            </div>
+    
+    
+        <footer>
+            &copy; 2024 Earleys Kitchen. All rights reserved.
+        </footer>
+    
+        <script type="module">
+            document.getElementById("menus").addEventListener("click", function() {
+                console.log("Navigating to the menu screen...");
+                window.location.replace("menu.html");
+            });
+    
+            document.getElementById("locations").addEventListener("click", function() {
+                console.log("Navigating to the locations screen...");
+                window.location.replace("locations.html");
+            });
+    
+            document.getElementById("about").addEventListener("click", function() {
+                console.log("Navigating to the about screen...");
+                window.location.replace("about.html");
+            });
+        </script>
+    </body>
+    </html>
+    
